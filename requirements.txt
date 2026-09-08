@@ -1,0 +1,46 @@
+# ---------------------------------------------------------------------------
+# TSI-TVR — Text-Video Retrieval Dependencies
+# ---------------------------------------------------------------------------
+# Install:  pip install -r requirements.txt
+# Note:     It is highly recommended to install PyTorch from the official
+#           source (conda / pip + index-url) first, then run:
+#           pip install -r requirements.txt
+# ---------------------------------------------------------------------------
+
+# ─── Core ML Framework ────────────────────────────────────────────────────
+torch>=2.0.0
+torchvision>=0.15.0
+numpy>=1.24.0
+
+# ─── Deep-Learning Models & Pretrained Encoders ──────────────────────────
+timm>=0.9.0                        # PyTorch Image Models (used in video transforms, cluster)
+transformers>=4.39.0               # Hugging Face transformers (BERT-style optim, tokenizer utils)
+
+# ─── Video Processing ─────────────────────────────────────────────────────
+decord                             # Video decoding / frame extraction
+opencv-python>=4.9.0               # OpenCV for video I/O & frame ops
+
+# ─── Image I/O ────────────────────────────────────────────────────────────
+Pillow                             # PIL image handling (dependency of torchvision, listed for clarity)
+
+# ─── NLP / Text Utilities ─────────────────────────────────────────────────
+ftfy                               # Fix text encodings (used in CLIP tokenization)
+regex                              # Advanced regex (used in CLIP tokenization)
+pandas                             # DataFrame & CSV parsing (dataset annotations)
+
+# ─── Profiling & Analysis ─────────────────────────────────────────────────
+thop                               # FLOPs / Params profiling (optional, used in main_retrieval.py)
+
+# ─── Cloud / Download ─────────────────────────────────────────────────────
+boto3                              # AWS S3 client (pretrained weight downloading)
+requests                           # HTTP requests (weight downloading fallback)
+
+# ─── Progress & Logging ───────────────────────────────────────────────────
+tqdm                               # Progress bars
+
+# ─── Preprocessing ────────────────────────────────────────────────────────
+ffmpeg-python                      # Python FFmpeg wrapper (video compression scripts)
+
+# ─── Common standard-library equivalents ──────────────────────────────────
+# math, os, json, csv, copy, hashlib, html, warnings, argparse, datetime, random
+# time, sys, subprocess, threading, multiprocessing, ... (all built-in Python)
