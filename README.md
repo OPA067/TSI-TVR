@@ -454,8 +454,8 @@ During training, logs are printed every `--n_display` iterations:
 
 ```
 eta: 0:10:00, epoch: 1/5, iteration: 100/219,
- time: 0.234, data: 0.012, loss: 2.345
- lr: 0.000100000/0.000000100, logit: 4.605, memory: 8.23GB
+time: 0.234, data: 0.012, loss: 2.345
+lr: 0.000100000/0.000000100, logit: 4.605, memory: 8.23GB
 ```
 
 Best checkpoints are typically saved as `pytorch_model.bin.best`.
