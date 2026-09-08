@@ -14,6 +14,13 @@ This is a **CLIP-based cross-modal text-video retrieval model** that achieves fi
 
 ---
 
+## Updates
+
+- **[2026.04]** Initial release — complete training & evaluation pipeline for text-video retrieval.
+- **[2026.05]** Added ActionFlow module with PCM (Progressive Clustering) for patch token compression.
+
+---
+
 ## Table of Contents
 
 - [Overview](#overview)
@@ -51,13 +58,6 @@ Text-Video Retrieval (TVR) aims to retrieve the most relevant video given a text
 | **Datasets** | 7 standard benchmarks: MSRVTT, MSVD, LSMDC, Charades, ActivityNet, DiDeMo, VATEX |
 | **Training** | Single-GPU or Multi-GPU (DDP via `torch.distributed.launch`) with warmup + cosine scheduling |
 | **Loss** | Cross-modal contrastive loss (InfoNCE) + KL divergence loss for temporal semantic consistency |
-
----
-
-## Updates
-
-- **[2025.08]** Initial release — complete training & evaluation pipeline for text-video retrieval.
-- **[2026.08]** Added ActionFlow module with PCM (Progressive Clustering) for patch token compression.
 
 ---
 
